@@ -1,0 +1,9 @@
+.detail{
+  &-wrapper{
+    display: flex;
+    gap: 32px;
+  }
+  &-left{
+    max-width: 342px;
+  }
+}
