@@ -1,9 +1,43 @@
 .detail{
+  &-right{
+    &__date{
+      color: $purple-heart;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.42;
+      margin-bottom: 32px;
+    }
+    &__title{
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 0.88;
+    }
+  }
   &-wrapper{
     display: flex;
     gap: 32px;
   }
   &-left{
     max-width: 342px;
+  }
+}
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .post-content{
+    padding: 0;
+  }
+  &-desktop{
+    &__slider{
+
+    }
+    &__column{
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
   }
 }

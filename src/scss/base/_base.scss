@@ -1,0 +1,18 @@
+.container{
+  max-width: $container-desktop;
+  width: 100%;
+  padding: $container-padding;
+  margin: 0 auto;
+}
+.theme-white {
+  background: $white-theme-color;
+}
+.theme-dark{
+  background: $dark-theme-color;
+}
+@media (max-width: 900px) {
+  .container{
+    max-width: $container-tablet;
+    width: 100%;
+  }
+}

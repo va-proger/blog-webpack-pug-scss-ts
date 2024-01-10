@@ -1,0 +1,122 @@
+.top-menu{
+  &__wrapper{
+    padding: 10px 0;
+  }
+  &__list{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    li{
+      padding: 8px;
+
+    }
+  }
+
+}
+@media (max-width: 490px) {
+  .header-top{
+    &.__active {
+      .top-menu {
+        position: relative;
+        z-index: 999;
+        &__list {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    }
+    &:not(.__active){
+      .top-menu {
+        opacity: 0;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .menu-burger{
+    position: relative;
+    height: 32px;
+    width: 32px;
+    padding: 4px;
+
+    span{
+
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 24px;
+      height: 2.667px;
+      border-radius: 2px;
+      background: $menu-color-white-theme;
+      &::after{
+        transition: all ease-in-out 200ms;
+        content: "";
+        position: absolute;
+        bottom: 6px;
+        transform: translate(0, -50%);
+        border-radius: 2px;
+        height: 2.667px;
+        width: 24px;
+        background: $menu-color-white-theme;
+      }
+      &::before{
+        transition: all ease-in-out 200ms;
+        content: "";
+        position: absolute;
+        top: 6px;
+        transform: translate(0, 50%);
+        border-radius: 2px;
+        height: 2.667px;
+        width: 24px;
+        background: $menu-color-white-theme;
+      }
+    }
+    &.__active {
+      z-index: 999;
+      position: absolute;
+      bottom: 0;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      span {
+        background: transparent;
+        transform: translate(0, -100%);
+        &::after {
+          transition: all ease-in-out 200ms;
+          top: 100%;
+          //top: -100%;
+          transform: translate(0, -50%)  rotate(45deg);
+        }
+        &::before {
+          transition: all ease-in-out 200ms;
+          top: 100%;
+          transform: translate(0, -50%) rotate(-45deg);
+        }
+      }
+    }
+  }
+  .theme-dark{
+    .menu-burger{
+      span{
+        background: $menu-color-dark-theme;
+        &::before{
+          background: $menu-color-dark-theme;
+        }
+        &::after{
+          background: $menu-color-dark-theme;
+        }
+      }
+      &.__active{
+        span{
+
+          background: transparent;
+        }
+      }
+    }
+  }
+  .theme-dark .menu-burger{
+
+  }
+}

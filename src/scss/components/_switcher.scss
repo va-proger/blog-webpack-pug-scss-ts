@@ -1,0 +1,117 @@
+.theme-white{
+  .switcher {
+    &-theme {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: #090D1F;
+        padding: 8px 16px;
+        border-radius: 29px;
+      }
+
+      &__left {
+        cursor: pointer;
+
+        span {
+          display: flex;
+          align-items: center;
+          width: 24px;
+          height: 24px;
+          border-radius: 20px;
+        }
+      }
+
+      &__right {
+        cursor: pointer;
+
+        span {
+          display: flex;
+          align-items: center;
+          background: #fff;
+          width: 24px;
+          height: 24px;
+          border-radius: 20px;
+        }
+
+        svg {
+          opacity: 0;
+          visibility: hidden;
+          transition: all ease-in-out 300ms;
+        }
+      }
+    }
+  }
+}
+
+.theme-dark {
+  .switcher {
+    &-theme {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: #fff;
+        padding: 8px 16px;
+        border-radius: 29px;
+      }
+
+      &__left {
+        cursor: pointer;
+
+        span {
+          display: flex;
+          align-items: center;
+          width: 24px;
+          height: 24px;
+          border-radius: 20px;
+          background: $dark-theme-color;
+          svg {
+            opacity: 0;
+            visibility: hidden;
+            transition: all ease-in-out 300ms;
+          }
+        }
+
+      }
+
+      &__right {
+        cursor: pointer;
+        span {
+          display: flex;
+          align-items: center;
+          width: 24px;
+          height: 24px;
+          border-radius: 20px;
+        }
+
+      }
+    }
+  }
+}
+@media (max-width: 490px) {
+  .header-top{
+    &.__active{
+      .switcher-theme{
+        position: relative;
+        z-index: 999;
+      }
+    }
+    &:not(.__active){
+      .switcher-theme {
+        opacity: 0;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+      }
+    }
+  }
+}

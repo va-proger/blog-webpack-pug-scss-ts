@@ -1,0 +1,4 @@
+mixin menu(menu)
+    each item in menu
+        li(class=item.className)
+            a(href=item.url)=item.name

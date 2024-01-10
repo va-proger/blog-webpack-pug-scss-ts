@@ -1,0 +1,100 @@
+section.posts
+    .container
+        .posts-title
+            h2 All blog posts
+        .posts-wrapper.grid.grid-big-3.grid-middle-2.grid-small-1
+            +firstPost({
+                'link': '',
+                'image': 'post-1.jpeg',
+                'date': 'Sunday , 30 Jan 2023',
+                'title': 'Bill Walsh leadership lessons',
+                'preview': 'Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?',
+                'isDirectRow': false,
+                'tags': {"leadership" : "Leadership", "management" : "Management","presentation" : "Presentation"},
+                'isViewArrow': true,
+            },
+                true)
+            +firstPost({
+                'link': '',
+                'image': 'post-2.jpeg',
+                'date': 'Sunday , 20 Jan 2023',
+                'title': 'PM mental models',
+                'preview': 'Mental models are simple expressions of complex processes or relationships.',
+                'isDirectRow': false,
+                'tags': {"product" : "Product", "research" : "Research", "frameworks" : "Frameworks"},
+                'isViewArrow': true,
+            },
+                true)
+            +firstPost({
+                'link': '',
+                'image': 'post-3.jpeg',
+                'date': 'Sunday , 18 Jan 2023',
+                'title': 'What is Wireframing?',
+                'preview': 'Introduction to Wireframing and its Principles. Learn from the best in the industry.',
+                'isDirectRow': false,
+                'tags': {"design" : "Design", "research" : "Research", "presentation" : "Presentation"},
+                'isViewArrow': true,
+            },
+                true)
+            +firstPost({
+                'link': '',
+                'image': 'post-4.jpeg',
+                'date': 'Sunday , 11 Jan 2023',
+                'title': 'How collaboration makes us better designers',
+                'preview': 'Collaboration can make our teams stronger, and our individual designs better.',
+                'isDirectRow': false,
+                'tags': {"design" : "Design", "research" : "Research", "presentation" : "Presentation"},
+                'isViewArrow': true,
+            },
+                true)
+            +firstPost({
+                'link': '',
+                'image': 'post-5.jpeg',
+                'date': 'Sunday , 9 Jan 2023',
+                'title': 'Our top 10 Javascript frameworks to use',
+                'preview': 'JavaScript frameworks make development easy with extensive features and functionalities.',
+                'isDirectRow': false,
+                'tags': {"software-development" : "Software Development", "tools" : "Tools", "saas" : "SaaS"},
+                'isViewArrow': true,
+            },
+                true)
+            +firstPost({
+                'link': '',
+                'image': 'post-6.jpeg',
+                'date': 'Sunday , 6 Jan 2023',
+                'title': 'Podcast: Creating a better CX Community',
+                'preview': 'Starting a community doesn’t need to be complicated, but how do you get started?',
+                'isDirectRow': false,
+                'tags': {'podcasts' : 'Podcasts', "customer-success" : "Customer Success", "presentation" : "Presentation"},
+                'isViewArrow': true,
+            },
+                true)
+        .posts-pagination.pagination
+            .posts-pagination__left.pagination-left
+                a(href="#")
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.8334 10.4998H4.16675M4.16675 10.4998L10.0001 16.3332M4.16675 10.4998L10.0001 4.6665" stroke="#667085" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    | Previous
+            ul.posts-pagination__middle.pagination-middle
+                li
+                    a.active(href="#") 1
+                li
+                    a(href="#") 2
+                li
+                    a(href="#") 3
+                li
+                    a(href="#") ...
+                li
+                    a(href="#") 8
+                li
+                    a(href="#") 9
+                li
+                    a(href="#") 10
+            .posts-pagination__right.pagination-right
+                a(href="#")
+                    | Next
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.16663 10.4998H15.8333M15.8333 10.4998L9.99996 4.6665M15.8333 10.4998L9.99996 16.3332" stroke="#667085" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+

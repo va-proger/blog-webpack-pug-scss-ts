@@ -1,0 +1,37 @@
+section.recent-post
+    .container
+        .recent-post__title
+            h2 Recent blog posts
+        .recent-post__wrapper
+            .recent-post__first
+                +firstPost({
+                    'link': '',
+                    'image': 'recent_first_post.jpeg',
+                    'date': 'Sunday , 12 Jan 2023',
+                    'title': 'UX review presentations',
+                    'preview': 'How do you create compelling presentations that wow your colleagues and impress your managers?',
+                    'isDirectRow': false,
+                    'tags': recentFirstPost,
+                    'isViewArrow': true,
+                },
+                    true)
+            .recent-post__all
+                +firstPost({
+                    'link': '',
+                    'image': 'rc-1.jpeg',
+                    'date': 'Sunday , 8 Jan 2023',
+                    'title': 'Migrating to Linear 101',
+                    'preview': 'Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get...',
+                    'isDirectRow': true,
+                    'tags': {'design':'Design', 'research' : 'Research'}},
+                    true)
+                +firstPost({
+                    'link': '',
+                    'image': 'rc-2.jpeg',
+                    'date': 'Sunday , 1 Jan 2023',
+                    'title': 'Building your API Stack',
+                    'preview': 'The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...',
+                    'isDirectRow': true,
+                    'tags': {'design': 'Design', 'research': 'Research'}
+                },
+                    true)

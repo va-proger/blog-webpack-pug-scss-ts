@@ -1,0 +1,8 @@
+mixin tag(className, tagText)
+    span(class=className)=tagText
+
+mixin tags(dataTags)
+    .tags
+        .tags-wrapper
+            each val, key in dataTags
+                +tag(key, val)

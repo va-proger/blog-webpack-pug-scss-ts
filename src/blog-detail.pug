@@ -1,0 +1,22 @@
+extends /layouts/common.pug
+
+block variables
+    -
+        var pageClass = 'detail'
+        var langName = 'ru'
+        var title = 'Главная Страница'
+
+
+block header
+    -
+        var detailPage = true
+    include layouts/common/header
+
+block content
+    .container
+        .detail-wrapper
+            include layouts/detail/left
+            include layouts/detail/right
+
+block footer
+    include layouts/common/footer
