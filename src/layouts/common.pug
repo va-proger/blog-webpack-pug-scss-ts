@@ -1,0 +1,24 @@
+include ../pug/mixin/index
+block variables
+
+doctype html
+html(lang= langName)
+    head
+        meta(charset='utf-8')
+        meta(name="theme-color", media="(prefers-color-scheme: white)", content="white")
+        meta(http-equiv="X-UA-Compatible", content="IE=Edge")
+        meta(name="viewport", content="initial-scale=1,minimum-scale=1,maximum-scale=1,width=device-width")
+        title VProger - #{title}
+    body(class=pageClass ? 'page-' + pageClass: '')
+
+        header(class=pageClass ? 'header header-' + pageClass: 'header')
+            .container
+                block header
+
+        main(class=pageClass ? 'main main-' + pageClass: 'main')
+            block content
+
+        footer(class=pageClass ? 'footer footer-' + pageClass: 'footer')
+            block footer
+                .footer-copyright
+                    | © #{new Date().getFullYear()}

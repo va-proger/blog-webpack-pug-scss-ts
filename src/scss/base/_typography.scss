@@ -1,0 +1,35 @@
+// @import '../../fonts/fonts';
+body{
+    font-family: $font-family;
+}
+body.theme-dark a{
+    color: #FFF;
+}
+body.theme-dark p{
+    color: #667085;
+}
+body.theme-dark h1,
+body.theme-dark h2,
+body.theme-dark h3,
+body.theme-dark h4,
+body.theme-dark h5,
+body.theme-dark .header-top__logo,
+{
+    color: #FFF;
+}
+// white
+body.theme-white a{
+    color: #1A1A1A;
+}
+body.theme-white p{
+    color: #C0C5D0;
+}
+body.theme-white h1,
+body.theme-white h2,
+body.theme-white h3,
+body.theme-white h4,
+body.theme-white h5,
+body.theme-white .header-top__logo,
+{
+    color: #1A1A1A;
+}

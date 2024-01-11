@@ -1,0 +1,24 @@
+extends /layouts/common.pug
+
+block variables
+  -
+    var pageClass = 'index'
+    var langName = 'ru'
+    var title = 'Главная Страница'
+
+
+block header
+    -
+        var namePage = 'The blog'
+    include layouts/common/header
+
+block content
+    -
+        let recentFirstPost = {'design': 'Design', 'research': 'Research', 'presentation': 'Presentation'}
+        let fullPost = {'design': 'Design', 'interface': 'Interface'}
+    include layouts/index/rescent_post
+    include layouts/index/full_post
+    include layouts/index/posts
+
+block footer
+    include layouts/common/footer

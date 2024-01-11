@@ -1,0 +1,31 @@
+$font-family: 'Inter';
+// colors
+$purple-heart: #6941C6;
+$violet-red: #C11574;
+$azure-blue: #026AA2;
+$text-main-theme-white: #1a1a1a;
+//  white theme
+$dark-theme-color: #090D1F;
+// dark theme
+$white-theme-color: #FFF;
+//tags
+$tag-bg: #FDF2FA;
+$tag-radius: 16px;
+//content
+$content-color-date: $purple-heart;
+$content-color-desc: #C0C5D0;
+// size
+$container-padding-width: 32px;
+$container-padding-height: 0;
+$container-padding: $container-padding-height $container-padding-width;
+$container-desktop: calc(1216px + ($container-padding-width * 2));
+$container-tablet: calc(770px + ($container-padding-width * 2));
+$container-mobile: calc(320px + ($container-padding-width * 2));
+//menu
+$menu-color-dark-theme: #ffffff;
+$menu-color-white-theme: #1A1A1A;
+// pagination
+$pagination-bg-active-color: #F9F5FF;
+$pagination-link-active-color: #121;
+$pagination-bg-hover-color: #F9F5FF;
+$pagination-link-hover-color: #121;
