@@ -3,12 +3,14 @@ const path = require('path');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
-
+const toml = require('toml');
+const yaml = require('yamljs');
+const json5 = require('json5');
 const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
     // entry: path.join(__dirname, 'src', 'index.js'), // раскомментировать если нужен js
-    entry: path.join(__dirname, 'src', 'index.ts'), // закомментировать если нужен js
+    entry: path.join(__dirname, 'src', 'index.tsx'), // закомментировать если нужен js
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'index.[contenthash].js',
@@ -58,6 +60,35 @@ module.exports = {
                     filename : 'fonts/[name][ext][query]',
                 }
             },
+            {
+                test: /\.(csv|tsv)$/i,
+                use: ['csv-loader'],
+            },
+            {
+                test: /\.xml$/i,
+                use: ['xml-loader'],
+            },
+            {
+                test: /\.toml$/i,
+                type: 'json',
+                parser: {
+                    parse: toml.parse,
+                },
+            },
+            {
+                test: /\.yaml$/i,
+                type: 'json',
+                parser: {
+                    parse: yaml.parse,
+                },
+            },
+            {
+                test: /\.json5$/i,
+                type: 'json',
+                parser: {
+                    parse: json5.parse,
+                },
+            },
         ],
 
     },
@@ -98,7 +129,7 @@ module.exports = {
     ],
     devServer: {
         watchFiles: path.join(__dirname, 'src'),
-        port: 9001,
+        port: 9000,
         // watchContentBase: true,
         hot: true,
     },
